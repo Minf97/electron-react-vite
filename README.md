@@ -1,37 +1,18 @@
-# Vite + React + Typescript + Electron - Starter
 
-![Vite + React + Typescript + Tailwind + Electron Starter](Screenshot.jpg)
 
-> It is a simple starter template without unnecessary packages.
+react的常用状态管理有：redux, mobx, hox, zustand
+redux又二次封装得到：redux tookit, dva, rematch
 
-This very simple Starter template, utilizes [Vite](https://github.com/vitejs/vite), [Tailwind](https://tailwindcss.com/), [React](https://reactjs.org/), [Typescript](https://www.typescriptlang.org/) and [Electron](https://electronjs.org/).
+# 技术栈
 
-By default, the React framework is used for the interface, but you can easily use any other framework such as Vue, Preact, Angular, Svelte or anything else.
+构建工具：vite
+框架和语言：electron + react + typescript
+状态管理：[hox](https://hox.js.org/zh/guide/quick-start)
+第三方库：tailwind原子CSS + [frame motion动效库](https://www.framer.com/motion/) + antd组件库 + swr数据获取和缓存
+UI库：[iconpark字节UI库](https://bytedance.larkoffice.com/wiki/wikcnrOVHCJQ4V3a7mDvmLjrePf) + @antd/icons
+中间件：CSS Modules + postCSS
 
-> Vite is framework agnostic
+# 参考文章
 
-## Installation
+[antd与tailwind样式冲突](https://kong.vision/react/antd%E4%B8%8Etailwindcss%E6%A0%B7%E5%BC%8F%E5%86%B2%E7%AA%81/)
 
-Clone this repo and install all dependencies  
-`yarn` or `npm install`
-
-## Development
-
-`yarn dev` or `npm run dev`
-
-## Build
-
-`yarn build` or `npm run build`
-
-## Publish
-
-`yarn dist` or `npm run dist`
-
-## More advanced templates  
-
-If you are looking for more advanced templates than this, please go to one of the following links (these are some other links out of the **[awesome-vite](https://github.com/vitejs/awesome-vite)** repo) or you can help me make this template better 🙂  
-
-Links: 
-- [vite-react-electron](https://github.com/caoxiemeihao/vite-react-electron)
-- [electron-vite-react](https://github.com/twstyled/electron-vite-react)
-- [vite-electron-esbuild-starter](https://github.com/jctaoo/vite-electron-esbuild-starter)
