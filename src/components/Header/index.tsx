@@ -50,7 +50,7 @@ export default function Index() {
             </div>
             {/* 个人信息和头像 */}
             <div className="flex flex-col justify-end text-right mr-2">
-              <div className="h1">用户名</div>
+              <div className="h1">admin</div>
               <div className="h2">阿里巴巴有限公司</div>
             </div>
             <Avatar icon={<UserOutlined />}></Avatar>
