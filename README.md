@@ -14,5 +14,5 @@ redux又二次封装得到：redux tookit, dva, rematch
 
 # 参考文章
 
-[antd与tailwind样式冲突](https://kong.vision/react/antd%E4%B8%8Etailwindcss%E6%A0%B7%E5%BC%8F%E5%86%B2%E7%AA%81/)
-[electron圆角](https://www.jianshu.com/p/c4bb54f4962c)
+- [antd与tailwind样式冲突](https://kong.vision/react/antd%E4%B8%8Etailwindcss%E6%A0%B7%E5%BC%8F%E5%86%B2%E7%AA%81/)
+- [electron圆角](https://www.jianshu.com/p/c4bb54f4962c)
