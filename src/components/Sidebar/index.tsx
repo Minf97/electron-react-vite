@@ -27,7 +27,7 @@ const items: MenuProps['items'] = [
     getItem('Item 2', 'g2', null, [getItem('Option 3', '3'), getItem('Option 4', '4')], 'group')
   ]),
 
-  getItem('导入简历', 'sub2', <FolderAddOutlined style={{ color: '#787486', fontSize: '20px' }} />, [
+  getItem('导入简历', 'sub2', <FolderAddOutlined style={{ color: '$color-h2', fontSize: '20px' }} />, [
     getItem('Option 5', '5'),
     getItem('Option 6', '6'),
     getItem('Submenu', 'sub3', null, [getItem('Option 7', '7'), getItem('Option 8', '8')])

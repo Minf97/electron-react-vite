@@ -1,14 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import '@/common/images/Icon-Electron.png';
 import App from './App';
 import { HoxRoot } from 'hox';
 import { ConfigProvider } from 'antd';
-
-// import { BrowserRouter } from 'react-router-dom';
-import AppBar from '@/components/AppBar';
-import Login from '@/pages/Login';
 import './index.scss';
 
 ReactDOM.render(
@@ -17,7 +11,11 @@ ReactDOM.render(
       theme={{
         components: {
           Menu: {
-            itemPaddingInline: 10
+            itemPaddingInline: 10,
+            colorSplit: '#DBDBDB'
+          },
+          Divider: {
+            colorSplit: '#DBDBDB'
           }
         }
       }}
