@@ -9,14 +9,19 @@ ReactDOM.render(
   <React.StrictMode>
     <ConfigProvider
       theme={{
+        token: {
+          // 分割线
+          colorSplit: '#DBDBDB'
+        },
         components: {
           Menu: {
             itemPaddingInline: 10,
-            colorSplit: '#DBDBDB'
+            // 激活时的背景样式
+            controlItemBgActive: '#f1effd',
+            // 选中时的文字样式
+            itemSelectedColor: '#000',
+            itemHeight: 50
           },
-          Divider: {
-            colorSplit: '#DBDBDB'
-          }
         }
       }}
     >

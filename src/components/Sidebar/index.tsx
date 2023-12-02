@@ -1,10 +1,14 @@
 import React from 'react';
 import styles from './index.module.scss';
-import { AllApplication, Comment , Peoples, Config, Add} from '@icon-park/react';
+import { AllApplication, Comment, Peoples, Config, Add } from '@icon-park/react';
 import type { MenuProps } from 'antd';
 import { Menu } from 'antd';
 
 type MenuItem = Required<MenuProps>['items'][number];
+
+function Circle({ hex }: { hex?: string }) {
+  return <div className={styles.circle} style={{ backgroundColor: hex || 'red', marginRight: '10px' }}></div>;
+}
 
 function getItem(
   label: React.ReactNode,
@@ -17,37 +21,24 @@ function getItem(
 }
 
 const items: MenuProps['items'] = [
-  getItem('简历列表', 'sub1', <AllApplication theme="outline" size="20" fill="#787486" strokeWidth={3}/>, [
-    getItem('Item 1', 'g1', null, [getItem('Option 1', '1'), getItem('Option 2', '2')], 'group'),
-    getItem('Item 2', 'g2', null, [getItem('Option 3', '3'), getItem('Option 4', '4')], 'group')
-  ]),
-  getItem('推荐模板', 'sub1', <Comment theme="outline" size="20" fill="#787486" strokeWidth={3}/>, [
-    getItem('Item 1', 'g1', null, [getItem('Option 1', '1'), getItem('Option 2', '2')], 'group'),
-    getItem('Item 2', 'g2', null, [getItem('Option 3', '3'), getItem('Option 4', '4')], 'group')
-  ]),
-
-  getItem('导入简历', 'sub2', <Add theme="outline" size="20" fill="#787486" strokeWidth={3}/>, [
-    getItem('Option 5', '5'),
-    getItem('Option 6', '6'),
-    getItem('Submenu', 'sub3', null, [getItem('Option 7', '7'), getItem('Option 8', '8')])
-  ]),
-
-  getItem('公司管理', 'sub2', <Peoples theme="outline" size="20" fill="#787486" strokeWidth={3}/>, [
-    getItem('Option 5', '5'),
-    getItem('Option 6', '6'),
-    getItem('Submenu', 'sub3', null, [getItem('Option 7', '7'), getItem('Option 8', '8')])
-  ]),
-
-  getItem('Setting', 'sub4', <Config theme="outline" size="20" fill="#787486" strokeWidth={3}/>, [
-    getItem('Option 9', '9'),
-    getItem('Option 10', '10'),
-    getItem('Option 11', '11'),
-    getItem('Option 12', '12')
-  ]),
-
+  getItem('简历列表', 'sub1', <AllApplication theme="outline" size="20" fill="#787486" strokeWidth={3} />),
+  getItem('推荐模板', 'sub2', <Comment theme="outline" size="20" fill="#787486" strokeWidth={3} />),
+  getItem('导入简历', 'sub3', <Add theme="outline" size="20" fill="#787486" strokeWidth={3} />),
+  getItem('公司管理', 'sub4', <Peoples theme="outline" size="20" fill="#787486" strokeWidth={3} />),
+  getItem('Setting', 'sub5', <Config theme="outline" size="20" fill="#787486" strokeWidth={3} />),
   { type: 'divider' },
-
-  getItem('Group', 'grp', null, [getItem('Option 13', '13'), getItem('Option 14', '14')], 'group')
+  getItem(
+    '我的项目',
+    'grp',
+    null,
+    [
+      getItem('我关注的人才', 'sub6', <Circle hex="#7AC555" />),
+      getItem('我入库的人才', 'sub7', <Circle hex="#ffa500" />),
+      getItem('我的最近浏览', 'sub8', <Circle hex="#e4ccfd" />),
+      getItem('管理员后台', 'sub9', <Circle hex="#76a5ea" />)
+    ],
+    'group'
+  )
 ];
 
 export default function Index() {
