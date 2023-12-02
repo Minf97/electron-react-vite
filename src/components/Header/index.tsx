@@ -1,19 +1,21 @@
 import React from 'react';
 import styles from './index.module.scss';
-import Logo from '@/common/images/Icon-Electron.png';
 import { Button, Divider, Input, Avatar, ConfigProvider } from 'antd';
+import { HappyProvider } from '@ant-design/happy-work-theme';
 import { UserOutlined, SearchOutlined } from '@ant-design/icons';
-import { Remind, Helpcenter, Schedule } from '@icon-park/react';
+import { Remind, Helpcenter, Schedule, StereoNesting } from '@icon-park/react';
 
 export default function Index() {
-  const customColor = styles.colorH2
+  const customColor = styles.colorH2;
   return (
     <>
       <div className={styles.container}>
         {/* left: logo和标题 */}
         <div className={`${styles.left} flex items-center`}>
-          <img className="w-12 h-auto" src={Logo} alt="" />
-          <div className="title">Electron</div>
+          <HappyProvider>
+            <Button icon={<StereoNesting theme="filled" size="20" fill="#5030e5" strokeLinecap="butt" />} ghost></Button>
+          </HappyProvider>
+          <div className={styles.title}>后台管理系统</div>
         </div>
 
         {/* <Divider type="vertical" style={{ height: '100%', margin: 0 }}></Divider> */}
@@ -44,9 +46,9 @@ export default function Index() {
           <div className={`${styles.right} flex-1`}>
             {/* 按钮 */}
             <div className={styles.btnBox}>
-              <Button icon={<Schedule theme="outline" size="20" fill="#787486" />} type='text'></Button>
-              <Button icon={<Helpcenter theme="outline" size="20" fill="#787486" />} type='text'></Button>
-              <Button icon={<Remind theme="outline" size="20" fill='#787486' />} type='text'></Button>
+              <Button icon={<Schedule theme="outline" size="20" fill="#787486" />} type="text"></Button>
+              <Button icon={<Helpcenter theme="outline" size="20" fill="#787486" />} type="text"></Button>
+              <Button icon={<Remind theme="outline" size="20" fill="#787486" />} type="text"></Button>
             </div>
             {/* 个人信息和头像 */}
             <div className="flex flex-col justify-end text-right mr-2">

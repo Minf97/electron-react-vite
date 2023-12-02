@@ -18,14 +18,14 @@ function AppBar() {
     <>
       <div className={`flex ${styles.draggable} bg-white w-full`}>
         <div className={`${styles.left} flex flex-auto`}></div>
-        <div className={`right flex w-24 ${styles.undraggable}`}>
+        <div className={`${styles.right} flex w-24`}>
           <Button onClick={window.Main.Minimize} className="w-8 flex-center" type="text">
             &#8211;
           </Button>
           <Button onClick={handleToggle} className="w-8 flex-center" type="text">
             {isMaximize ? '\u2752' : '⃞'}
           </Button>
-          <Button onClick={window.Main.Close} className="w-8 flex-center" type="text">
+          <Button onClick={window.Main.Close} className="w-8 flex-center" danger type="text">
             &#10005;
           </Button>
         </div>

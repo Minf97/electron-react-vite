@@ -56,3 +56,7 @@ vite-reactts-electron-starter
 
 - [antd与tailwind样式冲突](https://kong.vision/react/antd%E4%B8%8Etailwindcss%E6%A0%B7%E5%BC%8F%E5%86%B2%E7%AA%81/)
 - [electron圆角](https://www.jianshu.com/p/c4bb54f4962c)
+- [antdButton自定义波纹](https://ant-design.antgroup.com/components/config-provider-cn#config-provider-demo-wave)
+
+# 踩坑记录
+1. 调整`antdIcon`大小需要调整`fontSize`而不是宽高

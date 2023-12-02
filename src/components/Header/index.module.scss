@@ -11,7 +11,15 @@
 
 .left {
   height: 100%;
+  margin-left: 28px;
   width: $side-width;
+
+  .title {
+    margin-left: 10px;
+    font-size: $fontSize-h0;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
 }
 
 .middle {

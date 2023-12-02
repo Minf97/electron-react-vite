@@ -7,3 +7,9 @@
 .undraggable {
   -webkit-app-region: no-drag;
 }
+
+
+.right {
+  @apply undraggable;
+  margin-right: 10px;
+}
