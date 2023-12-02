@@ -20,7 +20,8 @@ ReactDOM.render(
             controlItemBgActive: '#f1effd',
             // 选中时的文字样式
             itemSelectedColor: '#000',
-            itemHeight: 50
+            // 高度
+            itemHeight: 45
           },
         }
       }}

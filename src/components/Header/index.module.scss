@@ -25,6 +25,7 @@
     width: 20px;
     height: 20px;
     padding: 0;
+    border: 0px;
   }
   .btn:hover {
     border-color: transparent !important;
@@ -40,14 +41,10 @@
 .right {
   @apply flex items-center justify-end;
   padding-right: $padding-body;
-}
 
-.btnBox {
+  .btnBox {
     @apply flex justify-around;
     width: 120px;
     margin-right: $padding-body;
-}
-
-.input {
-    width: 20px;
+  }
 }

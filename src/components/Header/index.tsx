@@ -13,21 +13,10 @@ export default function Index() {
         {/* left: logo和标题 */}
         <div className={`${styles.left} flex items-center`}>
           <HappyProvider>
-            <ConfigProvider
-              theme={{
-                components: {
-                  Button: {
-                    defaultBorderColor: 'transparent',
-                    colorInfoBorderHover: 'green'
-                  }
-                }
-              }}
-            >
-              <Button
-                className={styles.btn}
-                icon={<StereoNesting theme="filled" size="20" fill="#5030e5" strokeLinecap="butt" />}
-              ></Button>
-            </ConfigProvider>
+            <Button
+              className={styles.btn}
+              icon={<StereoNesting theme="filled" size="20" fill="#5030e5" strokeLinecap="butt" />}
+            />
           </HappyProvider>
           <div className={styles.title}>后台管理系统</div>
         </div>
