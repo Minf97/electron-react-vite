@@ -41,19 +41,20 @@ vite-reactts-electron-starter
 └─ yarn.lock                   
 
 # 快速开始
+1. **克隆仓库**
 ```bash
-# 克隆仓库
 git clone https://github.com/Minf97/electron-react-vite.git
-
-# 安装依赖 以下三个任选，推荐使用pnpm
-# cnpm i
-# yarn
-pnpm i
-
-# 运行项目
-npm run dev
-
 ```
+2. 安装依赖
+```bash
+// cnpm i 或者 yarn都可
+pnpm install
+```
+3. 运行项目
+```bash
+npm run dev
+```
+
 
 # 技术栈
 
