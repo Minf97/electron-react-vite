@@ -40,13 +40,27 @@ vite-reactts-electron-starter
 ├─ vite.config.ts              
 └─ yarn.lock                   
 
+# 快速开始
+1. **克隆仓库**
+```bash
+git clone https://github.com/Minf97/electron-react-vite.git
+```
+2. 安装依赖
+```bash
+// cnpm i 或者 yarn都可
+pnpm install
+```
+3. 运行项目
+```bash
+npm run dev
+```
 
 
 # 技术栈
 
 - 构建工具：vite
 - 框架和语言：electron + react + typescript
-- hooks: ahooks
+- hooks： ahooks
 - 状态管理：[hox](https://hox.js.org/zh/guide/quick-start)
 - 第三方库：tailwind原子CSS + [frame motion动效库](https://www.framer.com/motion/) + antd组件库 + swr数据获取和缓存
 - UI库：[iconpark字节UI库](https://bytedance.larkoffice.com/wiki/wikcnrOVHCJQ4V3a7mDvmLjrePf) + @antd/icons
