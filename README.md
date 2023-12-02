@@ -9,22 +9,23 @@
 react的常用状态管理有：redux, mobx, hox, zustand <br/>
 redux又二次封装得到：redux tookit, dva, rematch <br/>
 <br/>
-看了许多状态管理库，期望对齐vue3的`pinia`，尽可能做到统一，降低学习成本。经过筛选，最后锁定在`zustand`和`hox`，再仔细对比后选择了`hox`
+由于我是从vue3转过来的，期望对齐vue3的`pinia`，尽可能做到统一，降低学习成本。<br/>
+看了许多状态管理库，经过筛选，最后锁定在`zustand`和`hox`，再仔细对比后选择了`hox`
 
 # 项目结构
 vite-reactts-electron-starter  
-├─ electron    //          electron相关配置
-├─ main                 // electron打包产物
-├─ src                         // 主要代码入口
-│  ├─ api                 // 服务器接口api
-│  ├─ common                    // 静态资源
+├─ electron    //          electron相关配置<br/>
+├─ main                 // electron打包产物<br/>
+├─ src                         // 主要代码入口<br/>
+│  ├─ api                 // 服务器接口api<br/>
+│  ├─ common                    // 静态资源<br/>
 │  │  ├─ images  
-│  │  └─ styles                // 全局样式
-│  ├─ components                 // 组件
-│  ├─ pages                     // 页面    
-│  ├─ router                  // 路由
-│  ├─ store                   // 状态管理器
-│  ├─ types                  // TS类型  
+│  │  └─ styles                // 全局样式<br/>
+│  ├─ components                 // 组件<br/>
+│  ├─ pages                     // 页面    <br/>
+│  ├─ router                  // 路由<br/>
+│  ├─ store                   // 状态管理器<br/>
+│  ├─ types                  // TS类型  <br/>
 │  ├─ App.tsx                 
 │  ├─ index.html               
 │  ├─ index.scss               
