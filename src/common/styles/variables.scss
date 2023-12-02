@@ -1,3 +1,5 @@
+// 默认背景颜色
+$color-bgc: #f8f8f8;
 $color-bg1: #b5dadc;
 $color-h1: #0D062D;
 $color-h2: #787486;
@@ -5,10 +7,8 @@ $color-divider: #DBDBDB;
 $fontSize-h0: 18px;
 $fontSize-h1: 16px;
 $fontSize-h2: 14px;
-// 侧边栏的宽度
-$side-width: 20vw;
-// 边距
-$padding-body: 30px;
+$side-width: 20vw;    // 侧边栏的宽度
+$padding-body: 30px;  // 边距
 
 // 文字不可选中
 .user-select-none {

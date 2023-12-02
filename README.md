@@ -62,7 +62,7 @@ npm run dev
 - 框架和语言：electron + react + typescript
 - hooks： ahooks
 - 状态管理：[hox](https://hox.js.org/zh/guide/quick-start)
-- 第三方库：tailwind原子CSS + [frame motion动效库](https://www.framer.com/motion/) + antd组件库 + swr数据获取和缓存
+- 第三方库：tailwind原子CSS + [frame motion动效库](https://www.framer.com/motion/) + antd组件库 + [antd-pro中后台组件库](https://procomponents.ant.design/) + swr数据获取和缓存
 - UI库：[iconpark字节UI库](https://bytedance.larkoffice.com/wiki/wikcnrOVHCJQ4V3a7mDvmLjrePf) + @antd/icons
 - 中间件：CSS Modules + postCSS
 
