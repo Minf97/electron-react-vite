@@ -4,11 +4,11 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Body from './components/Body';
 
+import './index.scss';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import { globalRouters } from './router';
 import { RouterProvider } from 'react-router-dom';
-
 
 function App() {
   console.log(window.ipcRenderer);
@@ -21,7 +21,12 @@ function App() {
         {/* Bar顶部 */}
         {window.Main && <AppBar />}
         <Header></Header>
-        <Sidebar></Sidebar>
+        <div className="flex">
+          <Sidebar></Sidebar>
+          <div className='App_Body'>
+            <Body></Body>
+          </div>
+        </div>
       </div>
     </>
   );

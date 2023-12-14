@@ -46,6 +46,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.0",
     "sass": "^1.69.5",
+    "umi-request": "^1.4.0",
     "vite": "latest"
   },
   "devDependencies": {

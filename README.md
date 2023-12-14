@@ -48,6 +48,7 @@ git clone https://github.com/Minf97/electron-react-vite.git
 2. 安装依赖
 ```bash
 // cnpm i 或者 yarn都可
+// 似乎npm和cnpm会有node报错问题，建议pnpm
 pnpm install
 ```
 3. 运行项目
@@ -60,9 +61,15 @@ npm run dev
 
 - 构建工具：vite
 - 框架和语言：electron + react + typescript
-- hooks： ahooks
+- hooks： [ahooks](https://ahooks.js.org/zh-CN/)
 - 状态管理：[hox](https://hox.js.org/zh/guide/quick-start)
-- 第三方库：tailwind原子CSS + [frame motion动效库](https://www.framer.com/motion/) + antd组件库 + [antd-pro中后台组件库](https://procomponents.ant.design/) + swr数据获取和缓存
+- 第三方库：
+  - [tailwind原子CSS](https://tailwindcss.com/)
+  - [frame motion动效库](https://www.framer.com/motion/)
+  - [antd组件库](https://ant-design.antgroup.com/index-cn)
+  - [antd-pro中后台组件库](https://procomponents.ant.design/)
+  - swr数据获取和缓存(暂未使用，未来考虑加入)
+  - [umi-request网络请求库](https://github.com/umijs/umi-request/blob/master/README_zh-CN.md)
 - UI库：[iconpark字节UI库](https://bytedance.larkoffice.com/wiki/wikcnrOVHCJQ4V3a7mDvmLjrePf) + @antd/icons
 - 中间件：CSS Modules + postCSS
 

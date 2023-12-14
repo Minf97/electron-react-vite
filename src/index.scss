@@ -4,11 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-// 默认内边距
-
-
 * {
   margin: 0;
   padding: 0;
@@ -40,6 +35,8 @@ body {
   box-shadow: 1px 1px 10px grey;
 }
 
-
+.App_Body {
+  padding-left: $padding-body;
+}
 
 
