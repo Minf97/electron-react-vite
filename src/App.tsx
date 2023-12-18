@@ -22,8 +22,10 @@ function App() {
         {window.Main && <AppBar />}
         <Header></Header>
         <div className="flex">
-          <Sidebar></Sidebar>
-          <div className='App_Body'>
+          <div className="flex-1">
+            <Sidebar></Sidebar>
+          </div>
+          <div className="App_Body">
             <Body></Body>
           </div>
         </div>

@@ -36,7 +36,8 @@ body {
 }
 
 .App_Body {
-  padding-left: $padding-body;
+  padding: $padding-body $padding-body 0 $padding-body;
+  flex: 4;
 }
 
 
