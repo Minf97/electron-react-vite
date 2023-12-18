@@ -1,0 +1,14 @@
+.container {
+  width: calc(100vw - 22px);
+  height: calc(100vh - 22px);
+}
+
+.sidebar {
+  height: calc(100vh - 22px);
+}
+
+.body {
+  padding: $padding-body $padding-body 0 $padding-body;
+  height: calc(100vh - 22px);
+  flex: 4;
+}

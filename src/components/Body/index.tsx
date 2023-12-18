@@ -1,9 +1,8 @@
-
 import { EllipsisOutlined, PlusOutlined } from '@ant-design/icons';
 import type { ActionType, ProColumns } from '@ant-design/pro-components';
 import { ProTable, TableDropdown } from '@ant-design/pro-components';
 import { Button, Dropdown, Space, Tag } from 'antd';
-import React,{ useRef } from 'react';
+import React, { useRef } from 'react';
 import request from 'umi-request';
 import styles from './index.module.scss';
 
@@ -39,7 +38,7 @@ const columns: ProColumns<GithubIssueItem>[] = [
   {
     dataIndex: 'index',
     valueType: 'indexBorder',
-    width: 48,
+    width: 48
   },
   {
     title: '标题',
@@ -51,10 +50,10 @@ const columns: ProColumns<GithubIssueItem>[] = [
       rules: [
         {
           required: true,
-          message: '此项为必填项',
-        },
-      ],
-    },
+          message: '此项为必填项'
+        }
+      ]
+    }
   },
   {
     disable: true,
@@ -68,18 +67,18 @@ const columns: ProColumns<GithubIssueItem>[] = [
       all: { text: '超长'.repeat(50) },
       open: {
         text: '未解决',
-        status: 'Error',
+        status: 'Error'
       },
       closed: {
         text: '已解决',
         status: 'Success',
-        disabled: true,
+        disabled: true
       },
       processing: {
         text: '解决中',
-        status: 'Processing',
-      },
-    },
+        status: 'Processing'
+      }
+    }
   },
   {
     disable: true,
@@ -97,7 +96,7 @@ const columns: ProColumns<GithubIssueItem>[] = [
           </Tag>
         ))}
       </Space>
-    ),
+    )
   },
   {
     title: '创建时间',
@@ -105,7 +104,7 @@ const columns: ProColumns<GithubIssueItem>[] = [
     dataIndex: 'created_at',
     valueType: 'date',
     sorter: true,
-    hideInSearch: true,
+    hideInSearch: true
   },
   {
     title: '创建时间',
@@ -116,10 +115,10 @@ const columns: ProColumns<GithubIssueItem>[] = [
       transform: (value) => {
         return {
           startTime: value[0],
-          endTime: value[1],
+          endTime: value[1]
         };
-      },
-    },
+      }
+    }
   },
   {
     title: '操作',
@@ -142,11 +141,11 @@ const columns: ProColumns<GithubIssueItem>[] = [
         onSelect={() => action?.reload()}
         menus={[
           { key: 'copy', name: '复制' },
-          { key: 'delete', name: '删除' },
+          { key: 'delete', name: '删除' }
         ]}
-      />,
-    ],
-  },
+      />
+    ]
+  }
 ];
 
 export default function Index() {
@@ -162,30 +161,30 @@ export default function Index() {
         return request<{
           data: GithubIssueItem[];
         }>('https://proapi.azurewebsites.net/github/issues', {
-          params,
+          params
         });
       }}
       editable={{
-        type: 'multiple',
+        type: 'multiple'
       }}
       columnsState={{
         persistenceKey: 'pro-table-singe-demos',
         persistenceType: 'localStorage',
         defaultValue: {
-          option: { fixed: 'right', disable: true },
+          option: { fixed: 'right', disable: true }
         },
         onChange(value) {
           console.log('value: ', value);
-        },
+        }
       }}
       rowKey="id"
       search={{
-        labelWidth: 'auto',
+        labelWidth: 'auto'
       }}
       options={{
         setting: {
-          listsHeight: 400,
-        },
+          listsHeight: 400
+        }
       }}
       form={{
         // 由于配置了 transform，提交的参与与定义的不同这里需要转化一下
@@ -193,15 +192,15 @@ export default function Index() {
           if (type === 'get') {
             return {
               ...values,
-              created_at: [values.startTime, values.endTime],
+              created_at: [values.startTime, values.endTime]
             };
           }
           return values;
-        },
+        }
       }}
       pagination={{
         pageSize: 5,
-        onChange: (page) => console.log(page),
+        onChange: (page) => console.log(page)
       }}
       dateFormatter="string"
       headerTitle="高级表格"
@@ -222,23 +221,23 @@ export default function Index() {
             items: [
               {
                 label: '1st item',
-                key: '1',
+                key: '1'
               },
               {
                 label: '2nd item',
-                key: '1',
+                key: '1'
               },
               {
                 label: '3rd item',
-                key: '1',
-              },
-            ],
+                key: '1'
+              }
+            ]
           }}
         >
           <Button>
             <EllipsisOutlined />
           </Button>
-        </Dropdown>,
+        </Dropdown>
       ]}
     />
   );

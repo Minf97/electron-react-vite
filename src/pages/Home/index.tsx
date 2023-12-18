@@ -9,13 +9,15 @@ function Index() {
 
   return (
     <>
-      <Header></Header>
-      <div className="flex">
-        <div className="flex-1">
-          <Sidebar></Sidebar>
-        </div>
-        <div className="App_Body">
-          <Body></Body>
+      <div className={styles.container}>
+        <Header></Header>
+        <div className="flex">
+          <div className={`flex-1 ${styles.sidebar}`}>
+            <Sidebar></Sidebar>
+          </div>
+          <div className={styles.body}>
+            <Body></Body>
+          </div>
         </div>
       </div>
     </>

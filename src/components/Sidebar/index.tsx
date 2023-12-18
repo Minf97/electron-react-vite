@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './index.module.scss';
 import { AllApplication, Comment, Peoples, Config, Add } from '@icon-park/react';
 import type { MenuProps } from 'antd';
-import { Menu } from 'antd';
+import { Menu, ConfigProvider } from 'antd';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -46,13 +46,32 @@ export default function Index() {
     console.log(e);
   };
   return (
-    <Menu
-      onClick={onClick}
-      className={`user-select-none ${styles.menu}`}
-      defaultSelectedKeys={['1']}
-      defaultOpenKeys={['sub1']}
-      mode="inline"
-      items={items}
-    />
+    <ConfigProvider
+      theme={{
+        token: {
+          lineHeight: 2.5
+        },
+        components: {
+          Menu: {
+            itemPaddingInline: 10,
+            // 激活时的背景样式
+            controlItemBgActive: '#f1effd',
+            // 选中时的文字样式
+            itemSelectedColor: '#000',
+            // 高度
+            itemHeight: 45
+          }
+        }
+      }}
+    >
+      <Menu
+        onClick={onClick}
+        className={`user-select-none ${styles.menu}`}
+        defaultSelectedKeys={['1']}
+        defaultOpenKeys={['sub1']}
+        mode="inline"
+        items={items}
+      />
+    </ConfigProvider>
   );
 }
