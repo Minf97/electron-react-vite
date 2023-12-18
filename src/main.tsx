@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { globalRouters } from './router';
+import { RouterProvider } from 'react-router-dom';
 import { HoxRoot } from 'hox';
 import { ConfigProvider } from 'antd';
+import AppBar from '@/components/AppBar';
 import './index.scss';
 
 ReactDOM.render(
@@ -22,12 +24,17 @@ ReactDOM.render(
             itemSelectedColor: '#000',
             // 高度
             itemHeight: 45
-          },
+          }
         }
       }}
     >
       <HoxRoot>
-        <App />
+        <div id="win">
+          {/* Bar顶部 */}
+          {window.Main && <AppBar />}
+          {/* 路由 */}
+          <RouterProvider router={globalRouters}></RouterProvider>
+        </div>
       </HoxRoot>
     </ConfigProvider>
   </React.StrictMode>,

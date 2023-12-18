@@ -1,9 +1,25 @@
 import React from 'react';
+import Header from '@/components/Header';
+import Sidebar from '@/components/Sidebar';
+import Body from '@/components/Body';
+import styles from './index.module.scss';
 
-export default function Index() {
+function Index() {
+  console.log(window.ipcRenderer);
+
   return (
     <>
-      <div className="left">home</div>
+      <Header></Header>
+      <div className="flex">
+        <div className="flex-1">
+          <Sidebar></Sidebar>
+        </div>
+        <div className="App_Body">
+          <Body></Body>
+        </div>
+      </div>
     </>
   );
 }
+
+export default Index;

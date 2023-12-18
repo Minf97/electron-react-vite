@@ -10,7 +10,7 @@ export const globalRouters = createHashRouter([
     // 对精确匹配"/login"，跳转Login页面
     {
         path: '/login',
-        element: <Login></Login>,
+        element: <Login />,
     },
     // 精确匹配"/home"，跳转Home页面
     {
@@ -20,7 +20,7 @@ export const globalRouters = createHashRouter([
     // 如果URL没有"#路由"，跳转Login页面
     {
         path: '/',
-        element: <Home />,
+        element: <Login />,
     },
     // 未匹配，，跳转Login页面
     {

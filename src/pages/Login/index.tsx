@@ -6,15 +6,15 @@ import styles from './index.module.scss';
 export default function Index() {
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       {/* 左侧 */}
-      <div className="left">
-        <img className="logo" src={Logo} alt="logo" />
-        <div className="title">标题管理系统</div>
-        <img className="Abstraction" src={Abstraction} alt="" />
+      <div className={styles.left}>
+        <img className={styles.logo} src={Logo} alt="logo" />
+        <div className={styles.title}>标题管理系统</div>
+        <img className={styles.Abstraction} src={Abstraction} alt="" />
       </div>
       {/* 右侧 */}
-      <div className="right"></div>
+      <div className={styles.right}></div>
     </div>
   );
 }
