@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '@/common/images/Icon-Electron.png';
 import Abstraction from '@/common/images/Abstraction.png';
+import LoginForm from './loginForm'
 import styles from './index.module.scss';
 
 export default function Index() {
@@ -14,7 +15,9 @@ export default function Index() {
         <img className={styles.Abstraction} src={Abstraction} alt="" />
       </div>
       {/* 右侧 */}
-      <div className={styles.right}></div>
+      <div className={styles.right}>
+        <LoginForm />
+      </div>
     </div>
   );
 }

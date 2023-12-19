@@ -20,7 +20,7 @@ export const globalRouters = createHashRouter([
     // 如果URL没有"#路由"，跳转Login页面
     {
         path: '/',
-        element: <Home />,
+        element: <Login />,
     },
     // 未匹配，，跳转Login页面
     {
