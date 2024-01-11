@@ -17,13 +17,15 @@ import {
 import { Space, Tabs, message, theme } from 'antd';
 import type { CSSProperties } from 'react';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import request from 'umi-request';
+import { testUrl } from '@/api/index';
 type LoginType = 'phone' | 'account';
 
 export default () => {
   const { token } = theme.useToken();
   const [loginType, setLoginType] = useState<LoginType>('phone');
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const iconStyles: CSSProperties = {
     marginInlineStart: '16px',
     color: setAlpha(token.colorTextBase, 0.2),
@@ -32,23 +34,34 @@ export default () => {
     cursor: 'pointer'
   };
 
-
-  const onFinish = (values: any) => {
+  const onFinish = (values: { username: string; password: string }) => {
     // 处理登录逻辑
-    console.log(values)
-    if (values.username == 'admin' && values.password == 'admin') {
-      navigate('/home')
-    }else {
-      message.error('账号错误或密码错误')
-    }
+    console.log(values);
 
+    if (values.username == 'admin' && values.password == 'admin') {
+      navigate('/home');
+    } else {
+      message.error('账号错误或密码错误');
+    }
   };
 
   return (
     <ProConfigProvider hashed={false}>
       <div style={{ backgroundColor: token.colorBgContainer }}>
         <LoginForm
-          onFinish={onFinish}
+          onFinish={async () => {
+            const data = await request.post(testUrl + '/resume/user/v1/login', {
+              method: 'POST',
+              data: {
+                bizContent: {
+                  account: 'admin',
+                  password: 'admin'
+                }
+              }
+            });
+
+            console.log(data, 'request');
+          }}
           logo="https://github.githubassets.com/images/modules/logos_page/Octocat.png"
           title="Github"
           subTitle="全球最大的代码托管平台"
@@ -60,7 +73,6 @@ export default () => {
               <WeiboCircleOutlined style={iconStyles} />
             </Space>
           }
-
         >
           <Tabs centered activeKey={loginType} onChange={(activeKey) => setLoginType(activeKey as LoginType)}>
             <Tabs.TabPane key={'account'} tab={'账号密码登录'} />
