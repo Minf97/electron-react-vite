@@ -5,7 +5,8 @@ import LoginForm from './loginForm'
 import styles from './index.module.scss';
 
 export default function Index() {
-
+  // console.log(import.meta.env.BASE_URL);
+  
   return (
     <div className={styles.container}>
       {/* 左侧 */}

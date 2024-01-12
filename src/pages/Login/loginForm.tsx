@@ -19,7 +19,7 @@ import type { CSSProperties } from 'react';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import request from 'umi-request';
-import { testUrl } from '@/api/index';
+import { TEST_URL } from '@/api/index';
 type LoginType = 'phone' | 'account';
 
 export default () => {
@@ -50,7 +50,7 @@ export default () => {
       <div style={{ backgroundColor: token.colorBgContainer }}>
         <LoginForm
           onFinish={async () => {
-            const data = await request.post(testUrl + '/resume/user/v1/login', {
+            const data = await request.post(TEST_URL + '/resume/user/v1/login', {
               method: 'POST',
               data: {
                 bizContent: {
