@@ -21,3 +21,14 @@ request.interceptors.request.use((url, options) => {
 });
 
 request('/api', { method: 'POST', data: { b: 2 } });
+
+export function GetRequest(url: string, method: string, data: object) {
+  request(NOW_URL+url, {
+      method: method,
+      data: { 'bizContent': data }
+  }).then((res) => {
+      console.log(res)
+  }).catch((err) => {
+      console.log(err)
+  })
+}

@@ -18,8 +18,7 @@ import { Space, Tabs, message, theme } from 'antd';
 import type { CSSProperties } from 'react';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import request from 'umi-request';
-import { TEST_URL } from '@/api/index';
+import { GetRequest } from '@/api';
 type LoginType = 'phone' | 'account';
 
 export default () => {
@@ -49,19 +48,9 @@ export default () => {
     <ProConfigProvider hashed={false}>
       <div style={{ backgroundColor: token.colorBgContainer }}>
         <LoginForm
-          onFinish={async () => {
-            const data = await request.post(TEST_URL + '/resume/user/v1/login', {
-              method: 'POST',
-              data: {
-                bizContent: {
-                  account: 'admin',
-                  password: 'admin'
-                }
-              }
-            });
-
-            console.log(data, 'request');
-          }}
+         onFinish={async (values)=>{
+          GetRequest('/resume/user/v1/login','post',values)
+        }}
           logo="https://github.githubassets.com/images/modules/logos_page/Octocat.png"
           title="Github"
           subTitle="全球最大的代码托管平台"
